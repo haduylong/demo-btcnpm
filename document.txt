@@ -1,0 +1,30 @@
+cài môi trường nodejs
+command line: npm init --> npm install express
+//
+body-paser: giúp lấy các tham số client gửi đến
+dotenv: cấu hình file env, giúp lấy các tham số có trong file môi trường(.env) process.env.
+ejs: code html trên server
+@babel/core, @babel/preset-env , @babel/node: giúp hiểu các cư pháp khác nhau cảu các version javaScripts
+nodemon: tự động restart server khi save change file
+npm install --save body-parser dotenv ejs
+npm install --save-dev @babel/core @babel/preset-env @babel/node nodemon
+
+cấu trúc project: 
+server.js
+route: tạo các route truy cập đến các chức năng
+controller: điều hướng
+services: truy cập vào database
+views: hiển thị
+config: cấu hình
+public: nếu dùng nodejs làm cả client thì phải folder có các tài nguyên có thể truy cập (vd ảnh, html)
+
+
+
+lưu ý phân biệt sequelize và pool: sequelize giúp thực hiện ORM còn với pool thì phải gõ trực tiếp câu lệnh 
+còn sequelize-cli của npm cung cấp giao diện dòng lệnh để thao tác với cơ sở dữ liệu
+link sequelize: https://sequelize.org/docs/v6/getting-started/
+link sequelize-cli: https://sequelize.org/docs/v6/other-topics/migrations/
+npx sequelize-cli db:migrate khi chạy nhớ kiểm tra đã để đúng tên csdl trong config/config.json chưa
+file config/index.js tạo đối tượng db giúp kết nối xuống database
+
+
