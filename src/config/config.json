@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": null,
-    "database": "demobtl",
+    "database": "evedeeve",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "query": {"raw": true},
