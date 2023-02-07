@@ -11,6 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      // accountId thuộc về Account
+      Order.belongsTo(models.Account, {foreignKey: 'accountId', as:'FKOrderToAccount'});
+      Order.hasOne(models.OrderItem, {foreignKey: 'orderId' , as:'FKOderItemToOrder'});
+      Order.belongsTo(models.Voucher, {foreignKey: 'voucherId', as:'FKOrderToVoucher'});
     }
   }
   Order.init({
